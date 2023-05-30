@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge ONE Sprint 01</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+<body class="bg-indigo-50">
+    <main  class="p-5 flex flex-col h-screen max-h-screen space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
+        <div class="grow flex">
+            <div class="grow flex flex-col lg:space-y-4">
+                <div>
+                    <img src="imgs/logo.png" alt="Alura">
+                </div>
+                <div class="grow lg:w-5/6 lg:self-center">
+                    <textarea id="entrada" class="w-full h-full bg-transparent p-4 text-3xl text-blue-950 outline-0" placeholder="Ingrese texto aqui"></textarea>
+                </div>
+                <div class="lg:w-5/6 lg:self-center space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <img src="imgs/exclamation.png">
+                        <p class="text-sm">Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="space-y-4 md:flex md:space-y-0 md:space-x-4">
+                        <button class="w-full border border-blue-950 text-white bg-blue-950 hover:bg-blue-900 py-4 px-4 rounded-3xl" onclick="encriptar()">Encriptar</button>
+                        <button class="w-full border border-blue-950 text-blue-950 bg-gray-300 hover:bg-gray-400 hover:text-white py-4 px-4 rounded-3xl" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-3xl flex p-4 shadow-sm lg:w-1/4">
+            <div id="contenedor-salida" class="hidden w-full h-full flex flex-col">
+                <textarea id="salida" class="w-full h-full bg-transparent p-4 text-3xl text-blue-950 outline-0" readonly>hoberlai, cobermober enterstais?</textarea>
+                <button id="copiar" class="w-full border border-blue-950 text-blue-950 bg-white hover:bg-gray-50 py-4 px-4 rounded-3xl" onclick="copiar()">Copiar</button>
+            </div>
+            <div id="vacio" class="w-full h-full flex flex-col justify-center items-center space-y-2 text-center">
+                <img class="hidden lg:block" src="imgs/muneco.png">
+                <p class="text-lg font-bold">Ningún mensaje fue encontrado</p>
+                <p class="text-sm">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
